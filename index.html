@@ -8,22 +8,31 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <nav class="navbar">
+        <span id="menu-icon">☰</span>
         <h1>The Crochet Nest</h1>
-        <nav>
-            <a href="index.html">🏠 Home</a>
-            <a href="cart.html">🛒 Cart</a>
-            <a href="#">🚪 Sign Out</a>
-        </nav>
-    </header>
-    
-    <section class="products">
-        <div class="product">
-            <img src="https://via.placeholder.com/150" alt="Crochet Doll">
-            <h2>Handmade Crochet Doll</h2>
-            <p>Price: ₹500</p>
-            <button onclick="addToCart('Handmade Crochet Doll', 500)">Add to Cart</button>
+        <input type="text" placeholder="Search...">
+        <a href="cart.html">🛒 Cart</a>
+        <a href="login.html">🚪 Sign Out</a>
+    </nav>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <h3>User Details</h3>
+            <p id="userDetails"></p>
+            <h3>Previous Orders</h3>
+            <ul id="orderList"></ul>
+            <button id="closeSidebar">Close</button>
         </div>
-    </section>
+    </div>
+
+    <div class="products">
+        <div class="product">
+            <img src="images/product1.jpg" alt="Product 1">
+            <h2>Crochet Hat</h2>
+            <p>$20</p>
+            <button onclick="addToCart('Crochet Hat', 20)">Add to Cart</button>
+        </div>
+    </div>
 </body>
 </html>
