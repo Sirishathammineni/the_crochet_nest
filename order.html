@@ -2,15 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Order</title>
+    <title>Order Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Order Details</h1>
-    <input type="text" placeholder="Enter Address" required>
+    <input type="text" id="address" placeholder="Enter your address" required>
+    <select id="paymentMethod">
+        <option value="cod">Cash on Delivery</option>
+        <option value="online">Online Payment</option>
+    </select>
+    <div id="qrCode" style="display: none;">
+        <h3>Scan this QR code to pay:</h3>
+        <img src="images/qrcode.png" alt="QR Code">
+    </div>
     <button onclick="confirmOrder()">Confirm Order</button>
 
     <script>
+        document.getElementById("paymentMethod").addEventListener("change", function() {
+            if (this.value === "online") document.getElementById("qrCode").style.display = "block";
+            else document.getElementById("qrCode").style.display = "none";
+        });
+
         function confirmOrder() {
             alert("Order placed successfully!");
             localStorage.removeItem("cart");
