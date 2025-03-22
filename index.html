@@ -16,7 +16,28 @@
         <a href="cart.html">🛒 Cart</a>
         <a href="login.html">🚪 Sign Out</a>
     </nav>
+<!-- Add Category Section -->
+<div class="categories">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('hats')">Hats</button>
+    <button onclick="filterProducts('scarves')">Scarves</button>
+</div>
 
+<!-- Updated Product Section with Categories -->
+<div class="products">
+    <div class="product" data-category="hats">
+        <img src="images/product1.jpg" alt="Crochet Hat">
+        <h2>Crochet Hat</h2>
+        <p>$20</p>
+        <button onclick="addToCart('Crochet Hat', 20)">Add to Cart</button>
+    </div>
+    <div class="product" data-category="scarves">
+        <img src="images/product2.jpg" alt="Crochet Scarf">
+        <h2>Crochet Scarf</h2>
+        <p>$25</p>
+        <button onclick="addToCart('Crochet Scarf', 25)">Add to Cart</button>
+    </div>
+</div>
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
         <h2>User Details</h2>
